@@ -54,7 +54,7 @@ async function updateGist(stats) {
       gist_id: gistId,
       files: {
         [filename]: {
-          filename: `📊 Weekly development breakdown`,
+          filename: `📊 Last Week I worked on`,
           content: lines.join("\n")
         }
       }
@@ -65,7 +65,7 @@ async function updateGist(stats) {
 }
 
 function generateBarChart(percent, size) {
-  const syms = "░▏▎▍▌▋▊▉█";
+  const syms = "░▏▎▍▌▋▊▉💻";
 
   const frac = Math.floor((size * 8 * percent) / 100);
   const barsFull = Math.floor(frac / 8);
